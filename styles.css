@@ -1,3 +1,4 @@
+/* Base Styles */
 body, html {
     margin: 0;
     padding: 0;
@@ -5,27 +6,24 @@ body, html {
     background-color: #000000;
     color: #ffffff;
     line-height: 1.6;
-    
 }
 
+/* Header Styling */
 header {
     background: linear-gradient(to right, #b4b7e0, #8f94fb);
     color: #181818;
-    /* padding: 40px 0;
-    text-align: center;
-    position: relative; */
-} 
+}
 
-/* .profile-pic {
+.profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin: 0 auto;
     display: block;
+    margin: 0 auto;
     border: 5px solid #fff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-} */
+}
 
 .profile-pic:hover {
     transform: scale(1.05);
@@ -33,7 +31,13 @@ header {
 
 h1 {
     margin-top: 10px;
-    font-size: 50em;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 10px;
 }
 
 .social-links a {
@@ -52,12 +56,14 @@ h1 {
     color: #333;
 }
 
+/* Section Styles */
 section {
     padding: 30px 0;
 }
 
 .container {
     width: 80%;
+    max-width: 1200px;
     margin: auto;
     overflow: hidden;
 }
@@ -67,99 +73,6 @@ h2 {
     margin-bottom: 20px;
     color: #efefef;
     text-align: center;
-    align-items: center;
-}
-
-.mca:hover{
-    transform: scale(1.05);
-}
-.name:hover{
-    transform: scale(1.05);
-}
-.timeline {
-    display: flex;
-    flex-direction: column;
-}
-
-.timeline-item {
-    margin: 20px 0;
-    padding: 15px;
-    background: #212121;
-    border-left: 4px solid #4e54c8;
-    border-radius: 5px;
-}
-
-.certificates-grid, .projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.certificate-item, .project-card {
-    background: #fad4d4;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    width: 45%;
-    margin-bottom: 30px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: black;
-}
-
-.project-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.certificate-item:hover, .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.btn {
-    display: inline-block;
-    background: #4e54c8;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 30px;
-    margin-top: 10px;
-    transition: background 0.3s ease;
-}
-
-.btn:hover {
-    background: #8f94fb;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 30px 0;
-    
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Container and General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #000000;
-    color: #ffffff;
-    line-height: 1.6;
-}
-
-/* Section Headers */
-#education h2 {
-    text-align: center;
-    font-size: 2.5em;
-    color: #f9f9f9;
-    margin-bottom: 40px;
 }
 
 /* Education Timeline */
@@ -172,12 +85,14 @@ body {
 
 .timeline-item {
     background-color: #f49243;
-    width: 250%;
-    max-width: 6000px;
+    width: 80%;
+    max-width: 600px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    padding-left: 50px;
 }
 
 .timeline-item:hover {
@@ -192,90 +107,106 @@ body {
     margin-bottom: 10px;
 }
 
-/* Institution Details */
 .timeline-item p {
     margin: 5px 0;
     font-size: 1em;
     color: #555;
 }
 
-/* Separator */
-.timeline-item:not(:last-child)::after {
-    content: "";
-    display: block;
-    width: 3px;
-    height: 2px;
-    background-color: #ffffff;
-    margin: 20px auto;
-    border-radius: 5px;
-}
-/* General Container */
-.container {
+/* Certificates & Projects */
+.certificates-grid, .projects-grid {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.certificate-item, .project-card {
+    background: #fad4d4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     padding: 20px;
+    width: 45%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: black;
 }
 
-/* Profile Header */
-header {
-    background-color: #f4f4f4;
-    padding: 30px;
-    border-bottom: 2px solid #e0e0e0;
+.certificate-item:hover, .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* Profile Picture Styling */
-.profile-pic {
-    width: 200px; /* Make the image bigger */
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #007bff;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certificates-grid, .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .timeline-item {
+        width: 90%;
+    }
+
+    .certificate-item, .project-card {
+        width: 90%;
+        max-width: 400px;
+    }
 }
 
-/* Left Details Section */
-header .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
 }
 
-.profile-details {
-    flex: 1;
-    text-align: left;
-}
-
-/* Title and Name Styling */
-header h1 {
-    font-size: 2.5em;
+footer p {
     margin: 0;
-    color: #333;
 }
 
-header p {
-    font-size: 1.2em;
-    color: #555;
-    margin: 5px 0;
+/* Icons for Education Timeline */
+.timeline-item::before {
+    content: '🎓';
+    font-size: 30px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
 }
 
-/* Social Links */
-.social-links {
-    margin-top: 10px;
-}
-
-.social-links a {
+/* Button Styling */
+.btn {
     display: inline-block;
-    color: #007bff;
+    background: #4e54c8;
+    color: #fff;
+    padding: 10px 20px;
     text-decoration: none;
-    font-size: 1em;
-    margin-right: 15px;
-    transition: color 0.3s;
+    border-radius: 30px;
+    margin-top: 10px;
+    transition: background 0.3s ease;
 }
 
-.social-links a:hover {
-    color: #0056b3;
-}
-#projects h2{
-align-items: center;
+.btn:hover {
+    background: #8f94fb;
 }
